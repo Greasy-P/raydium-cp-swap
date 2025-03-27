@@ -1,6 +1,6 @@
 [package]
 name = "raydium-cp-swap"
-version = "0.1.0"
+version = "0.1.1"  # Increment to differentiate your fork
 description = "Created with Anchor"
 edition = "2021"
 
@@ -19,15 +19,16 @@ devnet = []
 client = []
 
 [dependencies]
-anchor-lang = { version = "0.29.0", features = ["init-if-needed"] }
-anchor-spl = { version = "0.29.0", features = ["metadata"] }
-spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
-spl-math = { version = "0.2", features = ["no-entrypoint"] }
-spl-memo = "4.0.0"
-uint = "0.9.1"
-solana-security-txt = "1.1.1"
-bytemuck = { version = "1.4.0", features = ["derive", "min_const_generics"] }
-arrayref = { version = "0.3.6" }
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }  # Latest compatible with solana 2.2.x
+anchor-spl = { version = "0.30.1", features = ["metadata"] }  # Match anchor-lang
+spl-token = { version = "5.0.0", features = ["no-entrypoint"] }  # Update to match solana 2.2.x
+spl-math = { version = "0.2", features = ["no-entrypoint"] }  # No update needed
+spl-memo = "5.0.1"  # Update to match solana 2.2.x
+uint = "0.9.1"  # No conflict
+solana-security-txt = "1.1.1"  # No conflict
+bytemuck = { version = "1.16.3", features = ["derive", "min_const_generics"] }  # Match your bot
+arrayref = { version = "0.3.6" }  # No conflict
+borsh = "1.5.7"  # Add to match your bot, often used with solana-sdk
 
 [dev-dependencies]
 quickcheck = "0.9"
